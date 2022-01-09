@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let temp = [...array]
+  while (temp.length > 1){
+    let first = temp.shift();
+    for (let each of temp){
+      if (first + each === target) {return true}
+    }
+    
+  }
+  //     if (array[a] + temp[b] === target) {return true}
+    return false
 }
 
 /* 
@@ -8,6 +18,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  for each item
+  add all other items
+    compare to target
+  if no target, remove item from array and start over
 */
 
 /*
